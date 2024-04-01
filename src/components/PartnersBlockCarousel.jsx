@@ -18,7 +18,7 @@ export const PartnersBlockCarousel = ({info = []}) => {
             // onSwiper={(swiper) => console.log(swiper)}
             breakpoints={{
                 320: {
-                    slidesPerView: 1
+                    slidesPerView: 2
                 },
                 400: {
                     slidesPerView: 2
