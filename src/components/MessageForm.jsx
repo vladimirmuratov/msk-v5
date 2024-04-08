@@ -3,16 +3,24 @@ import {useForm} from 'react-hook-form'
 import {BaseInput} from '@/components/base/BaseInput'
 import {useState} from 'react'
 import {sendEmail} from '@/lib/sendEmail'
+import {BaseDatePicker} from '@/components/base/BaseDatePicker'
 
 export const MessageForm = ({onSuccess, onFailed}) => {
     const [checked, setChecked] = useState(false)
-    const {control, handleSubmit, formState: {errors, isSubmitting}, reset,} = useForm()
+    const {control, handleSubmit, formState: {errors, isSubmitting}, reset,} = useForm({defaultValues: {
+            person: '',
+            dateBirth: '',
+            phone: '',
+            email: '',
+            info: ''
+        }})
 
     const onSubmit = async (data) => {
         const resStatus = await sendEmail(data)
 
         if (resStatus === 250) {
             reset()
+            setChecked(false)
             onSuccess(true)
         } else if (resStatus === 404) {
             onFailed(true)
@@ -39,7 +47,7 @@ export const MessageForm = ({onSuccess, onFailed}) => {
 
             <BaseInput control={control} label="Ваше имя" name="person" required={true} errorType={errors?.person?.type}
                        mask="Смирнов Иван"/>
-            <BaseInput control={control} label="Дата рождения" name="dateBirth" mask="01.01.1980"/>
+            <BaseDatePicker control={control} label="Дата рождения" name="dateBirth"/>
             <BaseInput control={control} label="Телефон" name="phone" required={true} errorType={errors?.phone?.type}
                        mask="+7 000 000 00 00"/>
             <BaseInput control={control} label="Email" name="email" mask="smirnov@mail.ru"/>

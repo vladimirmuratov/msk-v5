@@ -2,6 +2,8 @@ export const phoneNumber = '+7 (499) 719-81-00'
 export const email = 'moscowsc.post@yandex.ru'
 export const address = 'г. Москва, Мичуринский проспект, 6'
 
+export const timeOut = 3000
+
 export const bannerCards = [
     {
         id: 1,
