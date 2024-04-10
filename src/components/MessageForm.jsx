@@ -45,6 +45,8 @@ export const MessageForm = ({onSuccess, onFailed}) => {
             }}
         >
 
+            <a href='#contacts'></a>
+
             <BaseInput control={control} label="Ваше имя" name="person" required={true} errorType={errors?.person?.type}
                        mask="Смирнов Иван"/>
             <BaseDatePicker control={control} label="Дата рождения" name="dateBirth"/>
