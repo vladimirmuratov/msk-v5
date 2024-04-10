@@ -49,7 +49,8 @@ export const MessageForm = ({onSuccess, onFailed}) => {
                        mask="Смирнов Иван"/>
             <BaseDatePicker control={control} label="Дата рождения" name="dateBirth"/>
             <BaseInput control={control} label="Телефон" name="phone" required={true} errorType={errors?.phone?.type}
-                       mask="+7 000 000 00 00"/>
+                       mask="+7 (000) 000 00 00"/>
+
             <BaseInput control={control} label="Email" name="email" mask="smirnov@mail.ru"/>
             <BaseInput control={control} label="Доп.информация" name="info" multiline={true} mask="Опишите ситуацию"/>
 
