@@ -1,7 +1,7 @@
 import {Box, Typography} from '@mui/material'
 import {phoneNumber} from '@/config'
 
-export const Header = ({router}) => {
+export const Header = ({router, isMobile, onOpenCallModal}) => {
     return (
         <Box className="container" component="header"
              sx={{
@@ -50,7 +50,7 @@ export const Header = ({router}) => {
                 alignItems: 'center',
             }}>
                 <Typography
-                    onClick={() => router.push('#contacts')}
+                    onClick={isMobile ? () => router.push('#contacts') : onOpenCallModal}
                     sx={{
                     cursor: 'pointer',
                     fontWeight: 700,

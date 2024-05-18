@@ -1,7 +1,7 @@
 import {Box, Link, Typography} from '@mui/material'
 import {phoneNumber} from '@/config'
 
-export const TextBlock = () => {
+export const TextBlock = ({isMobile, onOpenCallModal}) => {
     return (
         <Box
             component="section"
@@ -29,10 +29,21 @@ export const TextBlock = () => {
             </Typography>
             <Typography sx={{color: 'var(--black)', fontSize: 18, fontWeight: 400}}>
                 Подробнее по телефону:<br/>
-                <Link href={`tel:${phoneNumber}`} sx={{
-                color: 'var(--red)',
-                textDecorationColor: 'var(--red)'
-            }}>{phoneNumber}</Link>, круглосуточно
+                {isMobile
+                    ? (<Link
+                        href={`tel:${phoneNumber}`}
+                        sx={{
+                            color: 'var(--red)',
+                            textDecorationColor: 'var(--red)'
+                        }}>{phoneNumber}</Link>)
+                    : (<Link
+                        onClick={onOpenCallModal}
+                        sx={{
+                            cursor: 'pointer',
+                            color: 'var(--red)',
+                            textDecorationColor: 'var(--red)'
+                        }}>{phoneNumber}</Link>)}
+                , круглосуточно
             </Typography>
         </Box>
     )

@@ -2,7 +2,7 @@ import {Box, Typography} from '@mui/material'
 import {bannerCards} from '@/config'
 import {BaseBannerCard} from '@/components/base/BaseBannerCard'
 
-export const BannerBlock = ({router}) => {
+export const BannerBlock = ({router, isMobile, onOpenCallModal}) => {
     return (
         <Box
             component="section"
@@ -25,7 +25,7 @@ export const BannerBlock = ({router}) => {
             </Typography>
 
             <Box sx={{display: {xs: 'none', sm: 'grid'}, gridTemplateColumns: {sm: '1fr', md: 'repeat(3, 1fr)'}, gap: '20px'}}>
-                {bannerCards.map((item) => <BaseBannerCard key={item.id} {...item} router={router}/>)}
+                {bannerCards.map((item) => <BaseBannerCard key={item.id} {...item} router={router} isMobile={isMobile} onOpenCallModal={onOpenCallModal}/>)}
             </Box>
 
         </Box>

@@ -44,7 +44,7 @@ export default function handler(req, res) {
         const message2 = {
             from: process.env.ADDRESS_FROM,
             to: [req.body.email],
-            subject: `Вы оставили заявку на звонок на сайте mskdoctor.ru в ${new Date().toLocaleString('ru-RU', {timeZone: 'Europe/Moscow'})}`,
+            subject: `Вы оставили заявку на звонок на сайте mskdoctor.ru ${new Date().toLocaleString('ru-RU', {timeZone: 'Europe/Moscow'})}`,
             html: ` <p>Имя: ${req.body.person}</p>
                     <p>Дата рождения: ${req.body.dateBirth ?? 'Нет'}</p>
                     <p>Телефон: ${req.body.phone}</p>

@@ -24,11 +24,24 @@ import {FloatBtn} from '@/components/FloatBtn'
 import {BaseModal} from '@/components/base/BaseModal'
 import {Metrika} from '@/components/Metrika'
 import {Suspense} from 'react'
+import {TextBannerTwo} from '@/components/TextBannerTwo'
+import {CallModal} from '@/components/CallModal'
 
 export default function Home() {
     const router = useRouter()
     const [success, setSuccess] = useState(false)
     const [failed, setFailed] = useState(false)
+    const [isMobile, setMobile] = useState(false)
+    const [isOpenCallModal, setOpenCallModal] = useState(false)
+
+    useEffect(() => {
+        const os = navigator.userAgentData.platform
+
+        if (os === 'Android' || os === 'iOS') {
+            setMobile(true)
+        }
+
+    }, [])
 
     useEffect(() => {
         let timeout
@@ -47,26 +60,37 @@ export default function Home() {
         setSuccess(false)
     }
 
+    const handleOpenCallModal = () => setOpenCallModal(true)
+    const handleCloseCallModal = () => setOpenCallModal(false)
+
+    const handleSuccessSendCallForm = () => setSuccess(true)
+    const handleFailedSendCallForm = () => setFailed(true)
+
     return (
         <>
             <Head>
-                <title>МСК Доктор</title>
-                <meta name="keywords" content="медицинские услуги, скорая помощь, госпитализация"/>
+                <title>МСК Доктор | Перевод пациента из одной больницы в другую</title>
+                <meta name="keywords"
+                      content="медицинские услуги, скорая помощь, госпитализация, перевод пациента из одной больницы в другую"/>
                 <meta name="description" content="компания по оказанию экстренных медицинских услуг"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/icon.png"/>
             </Head>
             <Box component="main" className="container">
-                <Header router={router}/>
-                <BannerBlock router={router}/>
+                <Header router={router} isMobile={isMobile} onOpenCallModal={handleOpenCallModal}/>
+                <BannerBlock router={router} isMobile={isMobile} onOpenCallModal={handleOpenCallModal}/>
+                <TextBannerTwo router={router} isMobile={isMobile} onOpenCallModal={handleOpenCallModal}/>
                 <InfoBlock carousel={carouselInfoBlock} info={textInfoBlock} bgImage={imageInfoBlock}/>
                 <TextBannerOne/>
-                <ServiceBlock info={serviceBlockCards}/>
-                <TextBlock/>
+                <ServiceBlock info={serviceBlockCards} isMobile={isMobile} onOpenCallModal={handleOpenCallModal}/>
+                <TextBlock isMobile={isMobile} onOpenCallModal={handleOpenCallModal}/>
                 <ListBlock info={listBlock}/>
                 <PartnersBlock info={partners}/>
-                <ContactsBlock onSuccess={setSuccess} onFailed={setFailed} router={router}/>
+                <ContactsBlock onSuccess={setSuccess} onFailed={setFailed} router={router} isMobile={isMobile}
+                               onOpenCallModal={handleOpenCallModal}/>
                 <FloatBtn router={router}/>
+                <CallModal isOpen={isOpenCallModal} onClose={handleCloseCallModal} onSuccess={handleSuccessSendCallForm}
+                           onFailed={handleFailedSendCallForm} onCloseModal={handleCloseCallModal}/>
                 <Suspense>
                     <Metrika/>
                 </Suspense>

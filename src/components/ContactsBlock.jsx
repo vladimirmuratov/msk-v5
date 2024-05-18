@@ -2,13 +2,13 @@ import {Box, Link, Typography} from '@mui/material'
 import {address, phoneNumber} from '@/config'
 import {MessageForm} from '@/components/MessageForm'
 
-export const ContactsBlock = ({onSuccess, onFailed, router}) => {
+export const ContactsBlock = ({onSuccess, onFailed, router, isMobile, onOpenCallModal}) => {
     const goPhone = () => router.push(`tel:${phoneNumber}`)
 
     return (
         <Box
             component="section"
-            id='contacts'
+            id="contacts"
             sx={{
                 scrollMarginTop: '100px',
                 backgroundColor: 'var(--white)',
@@ -34,12 +34,25 @@ export const ContactsBlock = ({onSuccess, onFailed, router}) => {
 
                 <Typography sx={{color: 'var(--black)', fontSize: 18}}>
                     Мы работаем ежедневно и круглосуточно, без выходных и праздников. Вы можете получить
-                    консультацию специалиста по телефону: <Link href={`tel:${phoneNumber}`}
-                                                                sx={{
-                                                                    color: 'var(--green)',
-                                                                    fontWeight: 700,
-                                                                    textDecorationColor: 'var(--green)'
-                                                                }}>{phoneNumber}</Link>.
+                    консультацию специалиста по телефону:
+                    {isMobile
+                        ? (<Link
+                                href={`tel:${phoneNumber}`}
+                                sx={{
+                                    color: 'var(--green)',
+                                    fontWeight: 700,
+                                    textDecorationColor: 'var(--green)'
+                                }}>{phoneNumber}</Link>
+                        )
+                        : (<Link
+                                onClick={onOpenCallModal}
+                                sx={{
+                                    cursor: 'pointer',
+                                    color: 'var(--green)',
+                                    fontWeight: 700,
+                                    textDecorationColor: 'var(--green)'
+                                }}>{phoneNumber}</Link>
+                        )}.
                     Мы постараемся ответить Вам максимально оперативно!
                 </Typography>
                 <Box sx={{marginTop: '20px'}}>
@@ -64,7 +77,7 @@ export const ContactsBlock = ({onSuccess, onFailed, router}) => {
                         <img src="/contact-icons/telefon.png" alt="icon"/>
                         <Typography sx={{color: 'var(--black)', fontWeight: 700, fontSize: 14}}>Телефон</Typography>
                         <Typography
-                            onClick={goPhone}
+                            onClick={isMobile ? goPhone : onOpenCallModal}
                             sx={{
                                 color: 'var(--red)',
                                 fontWeight: 700,
@@ -79,7 +92,7 @@ export const ContactsBlock = ({onSuccess, onFailed, router}) => {
                 </Box>
             </Box>
 
-                <MessageForm onSuccess={onSuccess} onFailed={onFailed}/>
+            <MessageForm onSuccess={onSuccess} onFailed={onFailed}/>
 
         </Box>
     )

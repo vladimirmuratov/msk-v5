@@ -1,7 +1,7 @@
 import {Box, Link, Typography} from '@mui/material'
 import {phoneNumber} from '@/config'
 
-export const BaseServiceBlockCard = ({src, label, text}) => {
+export const BaseServiceBlockCard = ({src, label, text, isMobile, onOpenCallModal}) => {
     return (
         <Box sx={{
             display: 'flex',
@@ -26,7 +26,8 @@ export const BaseServiceBlockCard = ({src, label, text}) => {
 
                 <Typography sx={{color: 'var(--black)', marginTop: {xs: '15px', sm: '30px'}}}>
                     Подробнее по телефону:<br/>
-                    <Link
+                    {isMobile
+                        ? (<Link
                         href={`tel:${phoneNumber}`}
                         sx={{
                             color: 'var(--green)',
@@ -34,7 +35,18 @@ export const BaseServiceBlockCard = ({src, label, text}) => {
                             ':hover': {textDecoration: 'underline'},
                             textDecorationColor: 'var(--green)'
                         }}
-                    >{phoneNumber}</Link>, круглосуточно
+                    >{phoneNumber}</Link>)
+                    : (<Link
+                            onClick={onOpenCallModal}
+                            sx={{
+                                color: 'var(--green)',
+                                fontWeight: 700,
+                                ':hover': {textDecoration: 'underline'},
+                                textDecorationColor: 'var(--green)',
+                                cursor: 'pointer'
+                            }}
+                        >{phoneNumber}</Link>)}
+                    , круглосуточно
                 </Typography>
             </Box>
 

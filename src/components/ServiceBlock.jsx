@@ -1,7 +1,7 @@
 import {Box, Typography} from '@mui/material'
 import {BaseServiceBlockCard} from '@/components/base/BaseServiceBlockCard'
 
-export const ServiceBlock = ({info = []}) => {
+export const ServiceBlock = ({info = [], isMobile, onOpenCallModal}) => {
     return (
         <Box
             component="section"
@@ -30,7 +30,7 @@ export const ServiceBlock = ({info = []}) => {
                     gap: {xs: '20px ', sm: '60px'}
             }}
             >
-                {info.map((item) => <BaseServiceBlockCard key={item.id} {...item} />)}
+                {info.map((item) => <BaseServiceBlockCard key={item.id} {...item} isMobile={isMobile} onOpenCallModal={onOpenCallModal}/>)}
             </Box>
         </Box>
     )
