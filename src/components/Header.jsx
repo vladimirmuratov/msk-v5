@@ -16,6 +16,7 @@ export const Header = ({router, isMobile, onOpenCallModal}) => {
              }}>
             <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexGrow: 1, paddingY: '20px'}}>
                 <Typography sx={{
+                    textAlign: 'center',
                     display: {xs: 'block', sm: 'none'},
                     fontWeight: 700,
                     fontSize: 16,
