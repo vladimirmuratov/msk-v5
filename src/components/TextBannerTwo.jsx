@@ -1,5 +1,4 @@
 import {Box, Typography} from '@mui/material'
-import {FloatBtn} from '@/components/FloatBtn'
 import {FloatBtnPulse} from '@/components/FloatBtnPulse'
 
 export const TextBannerTwo = ({router, isMobile, onOpenCallModal}) => {
@@ -27,37 +26,40 @@ export const TextBannerTwo = ({router, isMobile, onOpenCallModal}) => {
             </Typography>
 
             <Box component="ul">
-                <Box component="li">
+                <Box component="li" sx={{display: 'flex', justifyContent: 'left', alignItems: {xs: 'top', lg: 'center'}}}>
+                    <Typography sx={{fontWeight: 700}}>&mdash;&nbsp;</Typography>
                     <Typography
                         sx={{
                             color: 'var(--black)',
-                            fontSize: {xs: 22, sm: 25},
+                            fontSize: {xs: 18, sm: 20},
                             fontWeight: 500,
                         }}
                     >
-                        &mdash; Объединенная больница с поликлиникой Управления делами Президента РФ
+                        Объединенная больница с поликлиникой Управления делами Президента РФ <Box component="span" sx={{display: 'inline-block'}}>(ФГБУ "ОБП")</Box>
                     </Typography>
                 </Box>
-                <Box component="li">
+                <Box component="li" sx={{display: 'flex', justifyContent: 'left', alignItems: {xs: 'top', lg: 'center'}}}>
+                    <Typography sx={{fontWeight: 700}}>&mdash;&nbsp;</Typography>
                     <Typography
                         sx={{
                             color: 'var(--black)',
-                            fontSize: {xs: 22, sm: 25},
+                            fontSize: {xs: 18, sm: 20},
                             fontWeight: 500
                         }}
                     >
-                        &mdash; Клиническая больница №1 (Волынская) Управления делами Президента РФ
+                         Клиническая больница №1 Управления делами Президента РФ <Box component="span" sx={{display: 'inline-block'}}>(ФГБУ "Клиническая больница №1")</Box>
                     </Typography>
                 </Box>
-                <Box component="li">
+                <Box component="li" sx={{display: 'flex', justifyContent: 'left', alignItems: {xs: 'top', lg: 'center'}}}>
+                    <Typography sx={{fontWeight: 700}}>&mdash;&nbsp;</Typography>
                     <Typography
                         sx={{
                             color: 'var(--black)',
-                            fontSize: {xs: 22, sm: 25},
+                            fontSize: {xs: 18, sm: 20},
                             fontWeight: 500
                         }}
                     >
-                        &mdash; Клиническая больница Управления делами Президента РФ
+                        Клиническая больница Управления делами Президента РФ <Box component="span" sx={{display: 'inline-block'}}>(ФГБУ "ЦКБ")</Box>
                     </Typography>
                 </Box>
             </Box>

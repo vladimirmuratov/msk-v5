@@ -14,14 +14,14 @@ export const Header = ({router, isMobile, onOpenCallModal}) => {
                  backgroundColor: 'var(--white)',
                  boxShadow: '0 2px 2px lightgray'
              }}>
-            <Box sx={{display: 'flex', alignItems: 'center', flexGrow: 1, paddingY: '20px'}}>
+            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexGrow: 1, paddingY: '20px'}}>
                 <Typography sx={{
                     display: {xs: 'block', sm: 'none'},
                     fontWeight: 700,
-                    fontSize: 18,
+                    fontSize: 16,
                     lineHeight: '20px',
                     color: 'var(--red)'
-                }}>МСК —<br/>госпитализация</Typography>
+                }}>ПЛАТНАЯ ГОСПИТАЛИЗАЦИЯ</Typography>
                 <Typography sx={{
                     display: {xs: 'none', sm: 'block'},
                     paddingLeft: {sm: '20px'},
@@ -29,7 +29,7 @@ export const Header = ({router, isMobile, onOpenCallModal}) => {
                     fontSize: 24,
                     lineHeight: '30px',
                     color: 'var(--red)'
-                }}>МСК —<br/>Просто. Быстро. Надежно</Typography>
+                }}>ПЛАТНАЯ ГОСПИТАЛИЗАЦИЯ <br/>Просто. Быстро. Надежно</Typography>
             </Box>
 
             <Box sx={{
@@ -54,7 +54,7 @@ export const Header = ({router, isMobile, onOpenCallModal}) => {
                     sx={{
                     cursor: 'pointer',
                     fontWeight: 700,
-                    fontSize: {xs: 18, sm: 20, md: 26},
+                    fontSize: {xs: 16, sm: 20, md: 26},
                     lineHeight: '30px',
                     color: 'var(--red)',
                     whiteSpace: 'nowrap'
