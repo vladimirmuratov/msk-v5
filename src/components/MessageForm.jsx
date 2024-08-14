@@ -6,6 +6,8 @@ import {sendEmail} from '@/lib/sendEmail'
 import {BaseDatePicker} from '@/components/base/BaseDatePicker'
 
 export const MessageForm = ({onSuccess, onFailed}) => {
+    const regExpEmail = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+    const regExpPhone = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/
     const [checked, setChecked] = useState(false)
     const {control, handleSubmit, formState: {errors, isSubmitting}, reset,} = useForm({defaultValues: {
             person: '',
@@ -51,9 +53,9 @@ export const MessageForm = ({onSuccess, onFailed}) => {
                        mask="Смирнов Иван"/>
             <BaseDatePicker control={control} label="Дата рождения" name="dateBirth"/>
             <BaseInput control={control} label="Телефон" name="phone" required={true} errorType={errors?.phone?.type}
-                       mask="+7 (000) 000 00 00"/>
+                       mask="+7 (000) 000 00 00" regexp={regExpPhone}/>
 
-            <BaseInput control={control} label="Email" name="email" mask="smirnov@mail.ru"/>
+            <BaseInput control={control} label="Email" name="email" mask="smirnov@mail.ru" regexp={regExpEmail} errorType={errors?.email?.type}/>
             <BaseInput control={control} label="Доп.информация" name="info" multiline={true} mask="Опишите ситуацию"/>
 
             <Box sx={{display: 'flex'}}>

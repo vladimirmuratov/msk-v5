@@ -9,7 +9,8 @@ export const BaseInput = ({
                               multiline = false,
                               errorType = '',
                               mask = '',
-                              type = 'text'
+                              type = 'text',
+                              regexp = ''
                           }) => {
 
     return (
@@ -17,7 +18,7 @@ export const BaseInput = ({
             <Controller
                 name={name}
                 control={control}
-                rules={{required: required}}
+                rules={{required: required, pattern: regexp}}
                 render={({
                              field: {onChange, value},
                              fieldState: {error},
@@ -42,7 +43,10 @@ export const BaseInput = ({
             />
 
             {errorType === 'required' &&
-                <Typography sx={{fontSize: '10px', color: 'var(--red)'}}>Обязательное поле</Typography>}
+                <Typography sx={{fontSize: '14px', color: 'var(--red)'}}>Обязательное поле</Typography>}
+
+            {errorType === 'pattern' &&
+                <Typography sx={{fontSize: '14px', color: 'var(--red)'}}>Введите валидное значение</Typography>}
 
         </>
     )
