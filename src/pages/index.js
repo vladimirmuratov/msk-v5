@@ -85,7 +85,7 @@ export default function Home() {
                 <ServiceBlock info={serviceBlockCards} isMobile={isMobile} onOpenCallModal={handleOpenCallModal}/>
                 <TextBlock isMobile={isMobile} onOpenCallModal={handleOpenCallModal}/>
                 <ListBlock info={listBlock}/>
-                <PartnersBlock info={partners}/>
+                <PartnersBlock partners={partners}/>
                 <ContactsBlock onSuccess={setSuccess} onFailed={setFailed} router={router} isMobile={isMobile}
                                onOpenCallModal={handleOpenCallModal}/>
                 <FloatBtn router={router}/>

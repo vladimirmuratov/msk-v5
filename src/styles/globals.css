@@ -105,3 +105,9 @@ ul {
         margin-top: 50px;
     }
 }*/
+
+.banner-social-mobile{
+    justify-content: center!important;
+    gap: 30px;
+    /*margin-top: 10px;*/
+}

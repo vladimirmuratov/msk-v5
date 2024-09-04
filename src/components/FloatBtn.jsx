@@ -1,5 +1,5 @@
 import {Fab} from '@mui/material'
-import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined'
+import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled'
 
 export const FloatBtn = ({router}) => {
     return (
@@ -11,7 +11,7 @@ export const FloatBtn = ({router}) => {
             bottom: {xs: '10px', sm: '30px', md: '50px'},
             right: {xs: '10px', sm: '30px', md: '50px'}
         }}>
-            <CreateOutlinedIcon/>
+            <PhoneEnabledIcon/>
         </Fab>
     )
 }

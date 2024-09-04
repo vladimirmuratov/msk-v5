@@ -1,7 +1,7 @@
 import {Box, Typography} from '@mui/material'
-import {PartnersBlockCarousel} from '@/components/PartnersBlockCarousel'
+import {BasePartnerCard} from '@/components/base/BasePartnerCard'
 
-export const PartnersBlock = ({info = []}) => {
+export const PartnersBlock = ({partners = []}) => {
     return (
         <Box
             component="section"
@@ -49,7 +49,18 @@ export const PartnersBlock = ({info = []}) => {
                 Для вас всегда найдется место в палате.
             </Typography>
 
-            <PartnersBlockCarousel info={info}/>
+            {/*<PartnersBlockCarousel info={partners}/>*/}
+
+            <Box
+                sx={{
+                    display: 'grid',
+                    gridTemplateColumns: {xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr', lg: '1fr 1fr 1fr'},
+                    gap: {xs: '3px', sm: '5px', md: '10px'},
+                }}
+            >
+                {partners.map((item) => <BasePartnerCard key={item.id} {...item}/>)}
+            </Box>
+
         </Box>
     )
 }
