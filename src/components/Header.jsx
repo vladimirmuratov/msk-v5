@@ -15,7 +15,9 @@ export const Header = ({router, isMobile, onOpenCallModal}) => {
                  boxShadow: '0 2px 2px lightgray'
              }}>
             <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexGrow: 1, paddingY: '20px'}}>
-                <Typography sx={{
+                <Typography
+                    variant='h2'
+                    sx={{
                     textAlign: 'center',
                     display: {xs: 'block', sm: 'none'},
                     fontWeight: 700,
@@ -23,7 +25,9 @@ export const Header = ({router, isMobile, onOpenCallModal}) => {
                     lineHeight: '20px',
                     color: 'var(--red)'
                 }}>ПЛАТНАЯ ГОСПИТАЛИЗАЦИЯ</Typography>
-                <Typography sx={{
+                <Typography
+                    variant='h2'
+                    sx={{
                     display: {xs: 'none', sm: 'block'},
                     paddingLeft: {sm: '20px'},
                     fontWeight: 700,
