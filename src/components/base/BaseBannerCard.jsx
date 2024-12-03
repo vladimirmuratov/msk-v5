@@ -1,7 +1,7 @@
 import {Avatar, Box, Button, Typography} from '@mui/material'
 import {phoneNumber} from '@/config'
 
-export const BaseBannerCard = ({title, icon, router, isMobile, onOpenCallModal}) => {
+export const BaseBannerCard = ({alt, title, icon, router, isMobile, onOpenCallModal}) => {
     return (
         <Box sx={{
             display: 'flex',
@@ -13,7 +13,7 @@ export const BaseBannerCard = ({title, icon, router, isMobile, onOpenCallModal})
             paddingY: '30px',
             paddingX: '20px'
         }}>
-            <Avatar src={icon} alt="icon" sx={{width: '100px', height: '100px', backgroundColor: 'var(--white)'}}/>
+            <Avatar src={icon} alt={alt} sx={{width: '100px', height: '100px', backgroundColor: 'var(--white)'}}/>
             <Typography
                 sx={{
                     fontWeight: 500,
