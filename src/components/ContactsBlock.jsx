@@ -22,7 +22,7 @@ export const ContactsBlock = ({onSuccess, onFailed, router, isMobile, onOpenCall
 
             <Box>
                 <Typography
-                    variant="h4"
+                    variant="h3"
                     sx={{
                         fontSize: {xs: 22, sm: 30},
                         fontWeight: 600,

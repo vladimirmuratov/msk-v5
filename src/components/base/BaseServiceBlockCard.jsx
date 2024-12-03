@@ -14,7 +14,9 @@ export const BaseServiceBlockCard = ({src, alt, label, text, isMobile, onOpenCal
                     flexDirection: 'column',
                 }}
             >
-                <Typography sx={{
+                <Typography
+                    component='h4'
+                    sx={{
                     fontSize: {xs: '18px', sm: '24px'},
                     fontWeight: 700,
                     color: 'var(--black)',

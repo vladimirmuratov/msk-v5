@@ -15,6 +15,7 @@ export const BaseBannerCard = ({alt, title, icon, router, isMobile, onOpenCallMo
         }}>
             <Avatar src={icon} alt={alt} sx={{width: '100px', height: '100px', backgroundColor: 'var(--white)'}}/>
             <Typography
+                variant='h2'
                 sx={{
                     fontWeight: 500,
                     fontSize: 22,

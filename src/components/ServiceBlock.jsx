@@ -12,7 +12,7 @@ export const ServiceBlock = ({info = [], isMobile, onOpenCallModal}) => {
             }}
         >
             <Typography
-                variant='h4'
+                variant='h3'
                 sx={{
                     color: 'var(--black)',
                     fontWeight: 500,

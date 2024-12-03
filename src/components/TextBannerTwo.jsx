@@ -13,6 +13,7 @@ export const TextBannerTwo = ({router, isMobile, onOpenCallModal}) => {
             }}
         >
             <Typography
+                component='h2'
                 sx={{
                     color: 'var(--green)',
                     textAlign: 'center',

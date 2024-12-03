@@ -13,7 +13,7 @@ export const ListBlock = ({info = []}) => {
             }}
         >
             <Typography
-                variant='h4'
+                component='h3'
                 sx={{
                     color: 'var(--black)',
                     fontWeight: 500,

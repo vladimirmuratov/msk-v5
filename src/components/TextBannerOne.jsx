@@ -7,6 +7,7 @@ export const TextBannerOne = () => {
             sx={{backgroundColor: 'var(--white)'}}
         >
             <Typography
+                component='h2'
                 sx={{
                     color: 'var(--green)',
                     textAlign: 'center',

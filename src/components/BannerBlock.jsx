@@ -12,6 +12,7 @@ export const BannerBlock = ({router, isMobile, onOpenCallModal}) => {
             }}
         >
             <Typography
+                variant='h1'
                 sx={{
                     fontWeight: 700,
                     fontSize: 33, lineHeight: '40px',
