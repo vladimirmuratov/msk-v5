@@ -1,10 +1,10 @@
 import {Box, Typography} from '@mui/material'
 
-export const BaseInfoBlockItem = ({title = null, text = null, img = null}) => {
+export const BaseInfoBlockItem = ({title = null, text = null, img = null, alt = ''}) => {
 
     return (
         <Box sx={{height: '100%', backgroundColor: 'var(--green)', paddingBottom: '30px'}}>
-            {img && <img className="img" src={img} alt="pic"/>}
+            {img && <img className="img" src={img} alt={alt}/>}
             {title && <Typography
                 sx={{
                     color: 'var(--white)',

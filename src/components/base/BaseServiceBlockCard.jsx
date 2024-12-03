@@ -1,13 +1,13 @@
 import {Box, Link, Typography} from '@mui/material'
 import {phoneNumber} from '@/config'
 
-export const BaseServiceBlockCard = ({src, label, text, isMobile, onOpenCallModal}) => {
+export const BaseServiceBlockCard = ({src, alt, label, text, isMobile, onOpenCallModal}) => {
     return (
         <Box sx={{
             display: 'flex',
             gap: {xs: '20px', sm: '30px'}
         }}>
-            <img className="serviceIcon" src={src} alt="icon"/>
+            <img className="serviceIcon" src={src} alt={alt}/>
             <Box
                 sx={{
                     display: 'flex',
