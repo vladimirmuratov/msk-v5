@@ -73,6 +73,7 @@ export default function Home() {
                 <meta name="description" content="Московская Сервисная Компания: 10 лет опыта в платной госпитализации и транспортировке пациентов. Круглосуточные услуги в ведущих клиниках Москвы."/>
                 <meta name="keywords" content="платные больницы гинекологии, платная госпитализация в москве хирургия, платная травматология москва, госпитализация урология москва, кардиология платная госпитализация, платная госпитализация неврология, платная гастроэнтерология в москве, госпитализация в терапию, сомнология в москве"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <link rel="canonical" href="https://mskdoctor.ru/" />
                 <link rel="icon" href="/icon.png"/>
             </Head>
             <Box component="main" className="container">
