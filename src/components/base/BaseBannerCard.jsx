@@ -1,21 +1,29 @@
-import {Avatar, Box, Button, Typography} from '@mui/material'
-import {phoneNumber} from '@/config'
+import { Avatar, Box, Button, Typography } from '@mui/material';
+import { phoneNumber } from '@/config';
 
-export const BaseBannerCard = ({alt, title, icon, router, isMobile, onOpenCallModal}) => {
+export const BaseBannerCard = ({ alt, title, icon, router, isMobile, onOpenCallModal }) => {
     return (
-        <Box sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: '10px',
-            border: '1px solid var(--white)',
-            paddingY: '30px',
-            paddingX: '20px'
-        }}>
-            <Avatar src={icon} alt={alt} sx={{width: '100px', height: '100px', backgroundColor: 'var(--white)'}}/>
+        <Box
+            onClick={isMobile ? () => router.push(`tel:${phoneNumber}`) : onOpenCallModal}
+            sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '10px',
+                border: '1px solid var(--white)',
+                paddingY: '30px',
+                paddingX: '20px',
+                cursor: 'pointer',
+                transition: '0.3s',
+                '&:hover': {
+                    backdropFilter: 'blur(10px)',
+                    transform: 'scale(103%)'
+                }
+            }}>
+            <Avatar src={icon} alt={alt} sx={{ width: '100px', height: '100px', backgroundColor: 'var(--white)' }} />
             <Typography
-                variant='h2'
+                variant="h2"
                 sx={{
                     fontWeight: 500,
                     fontSize: 22,
@@ -27,7 +35,7 @@ export const BaseBannerCard = ({alt, title, icon, router, isMobile, onOpenCallMo
                 {title}
             </Typography>
             <Button
-                onClick={isMobile ? () => router.push(`tel:${phoneNumber}`) : onOpenCallModal}
+                // onClick={isMobile ? () => router.push(`tel:${phoneNumber}`) : onOpenCallModal}
                 size="large"
                 variant="contained"
                 sx={{
@@ -37,5 +45,5 @@ export const BaseBannerCard = ({alt, title, icon, router, isMobile, onOpenCallMo
                 позвонить
             </Button>
         </Box>
-    )
-}
+    );
+};
