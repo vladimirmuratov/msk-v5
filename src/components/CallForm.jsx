@@ -49,7 +49,7 @@ export const CallForm = ({onSuccess, onFailed, onCloseModal}) => {
             <BaseInput control={control} label="Телефон" name="phone" required={true} errorType={errors?.phone?.type}
                        mask="+7 (000) 000 00 00" regexp={regExpPhone}/>
 
-            <Box sx={{display: 'flex'}}>
+            <Box sx={{display: 'flex', alignItems: 'center'}}>
                 <Checkbox checked={checked} onChange={handleChange} sx={{alignSelf: 'start'}}/>
                 <Typography sx={{fontSize: 11, lineHeight: '11px'}}>
                     Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных.
