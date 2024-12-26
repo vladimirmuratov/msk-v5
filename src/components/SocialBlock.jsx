@@ -1,9 +1,9 @@
-import React from 'react'
-import {Box, Link} from '@mui/material'
-import Image from 'next/image'
-import {phoneTelegram, phoneViber, phoneWhatsApp} from '@/config'
+import React from 'react';
+import { Box, Link } from '@mui/material';
+import Image from 'next/image';
+import { email, phoneTelegram, phoneWhatsApp } from '@/config';
 
-const SocialBlock = ({className = ''}) => {
+const SocialBlock = ({ className = '' }) => {
     return (
         <Box
             sx={{
@@ -30,16 +30,24 @@ const SocialBlock = ({className = ''}) => {
                     height={30}
                 />
             </Link>
-            <Link href={`viber://add?number=${phoneViber}`}>
+            {/*<Link href={`viber://add?number=${phoneViber}`}>
                 <Image
                     src="/social/viber.svg"
                     alt="icon"
                     width={30}
                     height={30}
                 />
+            </Link>*/}
+            <Link href={`mailto:${email}`}>
+                <Image
+                    src="/social/email.svg"
+                    alt="icon"
+                    width={30}
+                    height={30}
+                />
             </Link>
         </Box>
-    )
-}
+    );
+};
 
-export default React.memo(SocialBlock)
+export default React.memo(SocialBlock);
