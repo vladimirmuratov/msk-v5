@@ -75,7 +75,6 @@ export default function Home() {
                       content="платные больницы гинекологии, платная госпитализация в москве хирургия, платная травматология москва, госпитализация урология москва, кардиология платная госпитализация, платная госпитализация неврология, платная гастроэнтерология в москве, госпитализация в терапию, сомнология в москве" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="yandex-verification" content="63b15477d46dd1f6" />
-                <link rel="canonical" href="https://mskdoctor.ru/" />
                 <link rel="icon" href="/icon.png" />
             </Head>
             <Box component="main" className="container">
