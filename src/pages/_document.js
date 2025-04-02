@@ -3,7 +3,7 @@ import {DocumentHeadTags, documentGetInitialProps} from '@mui/material-nextjs/v1
 
 export default function Document({props}) {
     return (
-        <Html lang="en">
+        <Html lang="en" prefix="og: https://ogp.me/ns#">
             <Head>
                 <DocumentHeadTags {...props} />
             </Head>
