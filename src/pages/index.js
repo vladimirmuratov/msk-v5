@@ -74,20 +74,22 @@ export default function Home() {
                 <meta name="keywords"
                       content="платные больницы гинекологии, платная госпитализация в москве хирургия, платная травматология москва, госпитализация урология москва, кардиология платная госпитализация, платная госпитализация неврология, платная гастроэнтерология в москве, госпитализация в терапию, сомнология в москве" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="yandex-verification" content="63b15477d46dd1f6" />
+                <meta name="yandex-verification" content="626a3f3667cfa8e8" />
                 <link rel="icon" href="/icon.png" />
                 <meta property="og:locale" content="ru_RU" />
                 <meta property="og:title" content="Платная госпитализация 8 (499) 719-81-00, 24/7" />
                 <meta property="og:description"
                       content="Платная госпитализация в Москве. 10 лет опыта. 20 клиник-партнеров. Федеральные, ведомственные и частные клиники. Работаем по всей территории России и СНГ. Оперативно. Финансовая прозрачность." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://mskdoctor.ru/" />
-                <meta property="og:image" content="https://mskdoctor.ru/images/img2.jpg" />
+                <meta property="og:url" content="https://msk-doctor.vercel.app/" />
+                <meta property="og:image" content="https://msk-doctor.vercel.app/images/img2.jpg" />
                 <meta property="og:image:alt"
                       content="Медицинская Сервисная Компания. Платная госпитализация 8 (499) 719-81-00, 24/7" />
                 <meta property="og:image:type" content="image/jpg" />
                 <meta property="og:site_name"
                       content="Медицинская Сервисная Компания. Экстренная госпитализация 8 (499) 719-81-00, 24/7" />
+
+                <link rel="canonical" href="https://msk-doctor.vercel.app"/>
             </Head>
             <Box component="main" className="container">
                 <Header router={router} isMobile={isMobile} onOpenCallModal={handleOpenCallModal} />
