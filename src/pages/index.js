@@ -74,7 +74,6 @@ export default function Home() {
                 <meta name="keywords"
                       content="платные больницы гинекологии, платная госпитализация в москве хирургия, платная травматология москва, госпитализация урология москва, кардиология платная госпитализация, платная госпитализация неврология, платная гастроэнтерология в москве, госпитализация в терапию, сомнология в москве" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="yandex-verification" content="626a3f3667cfa8e8" />
                 <link rel="icon" href="/icon.png" />
                 <meta property="og:locale" content="ru_RU" />
                 <meta property="og:title" content="Платная госпитализация 8 (499) 719-81-00, 24/7" />
@@ -89,6 +88,7 @@ export default function Home() {
                 <meta property="og:site_name"
                       content="Медицинская Сервисная Компания. Экстренная госпитализация 8 (499) 719-81-00, 24/7" />
 
+                <meta name="yandex-verification" content="626a3f3667cfa8e8" />
                 <link rel="canonical" href="https://msk-doctor.vercel.app"/>
             </Head>
             <Box component="main" className="container">

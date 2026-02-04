@@ -1,4 +1,5 @@
 export const phoneNumber = '+7 (499) 719-81-00'
+export const phoneNumberLink = '+74997198100'
 
 export const phoneWhatsApp = '+79268158505'
 export const phoneTelegram = '+79268158505'

@@ -5,7 +5,7 @@ export const BaseListItem = ({text}) => {
     return (
         <ListItem>
             <ListItemIcon>
-                <CheckIcon/>
+                <CheckIcon sx={{color: 'var(--green)'}}/>
             </ListItemIcon>
             <ListItemText
                 primaryTypographyProps={{fontSize: '18px'}}

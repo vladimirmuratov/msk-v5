@@ -1,5 +1,5 @@
 import { Avatar, Box, Button, Typography } from '@mui/material';
-import { phoneNumber } from '@/config';
+import { phoneNumber, phoneNumberLink } from '@/config';
 
 export const BaseBannerCard = ({ alt, title, icon, router, isMobile, onOpenCallModal }) => {
     return (
@@ -35,7 +35,7 @@ export const BaseBannerCard = ({ alt, title, icon, router, isMobile, onOpenCallM
                 {title}
             </Typography>
             <Button
-                // onClick={isMobile ? () => router.push(`tel:${phoneNumber}`) : onOpenCallModal}
+                onClick={isMobile ? () => router.push(`tel:${phoneNumberLink}`) : onOpenCallModal}
                 size="large"
                 variant="contained"
                 sx={{

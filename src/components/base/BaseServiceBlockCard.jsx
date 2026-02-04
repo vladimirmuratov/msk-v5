@@ -1,13 +1,13 @@
-import {Box, Link, Typography} from '@mui/material'
-import {phoneNumber} from '@/config'
+import { Box, Link, Typography } from '@mui/material';
+import { phoneNumber, phoneNumberLink } from '@/config';
 
-export const BaseServiceBlockCard = ({src, alt, label, text, isMobile, onOpenCallModal}) => {
+export const BaseServiceBlockCard = ({ src, alt, label, text, isMobile, onOpenCallModal }) => {
     return (
         <Box sx={{
             display: 'flex',
-            gap: {xs: '20px', sm: '30px'}
+            gap: { xs: '20px', sm: '30px' }
         }}>
-            <img className="serviceIcon" src={src} alt={alt}/>
+            <img className="serviceIcon" src={src} alt={alt} />
             <Box
                 sx={{
                     display: 'flex',
@@ -15,35 +15,35 @@ export const BaseServiceBlockCard = ({src, alt, label, text, isMobile, onOpenCal
                 }}
             >
                 <Typography
-                    component='h4'
+                    component="h4"
                     sx={{
-                    fontSize: {xs: '18px', sm: '24px'},
-                    fontWeight: 700,
-                    color: 'var(--black)',
-                    lineHeight: '27px',
-                    marginBottom: {xs: '15px', sm: '30px'}
-                }}>{label}</Typography>
+                        fontSize: { xs: '18px', sm: '24px' },
+                        fontWeight: 700,
+                        color: 'var(--black)',
+                        lineHeight: '27px',
+                        marginBottom: { xs: '15px', sm: '30px' }
+                    }}>{label}</Typography>
 
-                <Typography sx={{color: 'var(--black)', lineHeight: 1.3}}>{text}</Typography>
+                <Typography sx={{ color: 'var(--black)', lineHeight: 1.3 }}>{text}</Typography>
 
-                <Typography sx={{color: 'var(--black)', marginTop: {xs: '15px', sm: '30px'}}}>
-                    Подробнее по телефону:<br/>
+                <Typography sx={{ color: 'var(--black)', marginTop: { xs: '15px', sm: '30px' } }}>
+                    Подробнее по телефону:<br />
                     {isMobile
                         ? (<Link
-                        href={`tel:${phoneNumber}`}
-                        sx={{
-                            color: 'var(--green)',
-                            fontWeight: 700,
-                            ':hover': {textDecoration: 'underline'},
-                            textDecorationColor: 'var(--green)'
-                        }}
-                    >{phoneNumber}</Link>)
-                    : (<Link
+                            href={`tel:${phoneNumberLink}`}
+                            sx={{
+                                color: 'var(--green)',
+                                fontWeight: 700,
+                                ':hover': { textDecoration: 'underline' },
+                                textDecorationColor: 'var(--green)'
+                            }}
+                        >{phoneNumber}</Link>)
+                        : (<Link
                             onClick={onOpenCallModal}
                             sx={{
                                 color: 'var(--green)',
                                 fontWeight: 700,
-                                ':hover': {textDecoration: 'underline'},
+                                ':hover': { textDecoration: 'underline' },
                                 textDecorationColor: 'var(--green)',
                                 cursor: 'pointer'
                             }}
@@ -53,5 +53,5 @@ export const BaseServiceBlockCard = ({src, alt, label, text, isMobile, onOpenCal
             </Box>
 
         </Box>
-    )
-}
+    );
+};
