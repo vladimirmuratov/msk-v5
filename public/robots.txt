@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-
+Disallow: /*?*
 Sitemap: https://msk-doctor.vercel.app/sitemap.xml
