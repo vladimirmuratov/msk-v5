@@ -1,14 +1,15 @@
-export const phoneNumber = '+7 (499) 719-81-00'
-export const phoneNumberLink = '+74997198100'
+export const phoneNumber = '+7 (499) 719-81-00';
+export const phoneNumberLink = '+74997198100';
 
-export const phoneWhatsApp = '+79268158505'
-export const phoneTelegram = '+79268158505'
-export const phoneViber = '79268158505'
+export const phoneWhatsApp = '+79268158505';
+export const telegramLink = 'https://t.me/MedScompany';
+export const phoneViber = '79268158505';
+export const maxLink = 'https://max.ru/u/f9LHodD0cOL8G6-pNFCQ3E-059tyhBQYxknGhq_fIsr3Lge7_i0lYCzTk-Q';
 
-export const email = 'moscowsc.post@yandex.ru'
-export const address = 'г. Москва, Мичуринский проспект, 6'
+export const email = 'moscowsc.post@yandex.ru';
+export const address = 'г. Москва, Мичуринский проспект, 6';
 
-export const timeOut = 3000
+export const timeOut = 3000;
 
 export const bannerCards = [
     {
@@ -47,7 +48,7 @@ export const bannerCards = [
         icon: '/icons/tyazhelye.png',
         alt: 'экстренная госпитализация пациента в стационар'
     },
-]
+];
 
 export const carouselInfoBlock = [
     {
@@ -64,14 +65,14 @@ export const carouselInfoBlock = [
         img: '/images/img2.jpg',
         alt: 'платный стационар терапия'
     },
-]
+];
 
 export const textInfoBlock = {
     title: 'Мы бережем каждую минуту жизни',
     text: 'Наша компания оказывает помощь в госпитализации в Москве и Московской области и знает всё о ведущих клиниках и врачах. Нам прекрасно известно, сколько стоит отдельная палата в больнице. Какие стационары оказывают услуги именно по вашему профилю и как госпитализироваться в нужную больницу. Мы готовы прийти на помощь даже если больному поступил отказ в госпитализации в другие клиники. Нам прекрасно известно, какие особенности имеет госпитализация пожилых пациентов — и мы готовы сопровождать их круглые сутки семь дней в неделю.'
-}
+};
 
-export const imageInfoBlock = '/images/img1.jpg'
+export const imageInfoBlock = '/images/img1.jpg';
 
 export const serviceBlockCards = [
     {
@@ -130,21 +131,21 @@ export const serviceBlockCards = [
         text: 'В день обращения мы подберем для Вас опытную, добрую и порядочную патронажную сестру, обладающую всеми необходимыми медицинскими навыками.',
         alt: 'патронажная служба'
     },
-]
+];
 
 export const listBlock = [
-    {id: 1, text: 'Оптимальный выбор клиники'},
-    {id: 2, text: 'Экспертный контроль качества и стоимости лечения'},
-    {id: 3, text: 'Врачебное сопровождение'},
-    {id: 4, text: 'Комплексный подход'},
-    {id: 5, text: 'Юридическую поддержку'},
-]
+    { id: 1, text: 'Оптимальный выбор клиники' },
+    { id: 2, text: 'Экспертный контроль качества и стоимости лечения' },
+    { id: 3, text: 'Врачебное сопровождение' },
+    { id: 4, text: 'Комплексный подход' },
+    { id: 5, text: 'Юридическую поддержку' },
+];
 
 export const partners = [
     {
         id: 1,
         logo: '/images/partners/2_1_1x.png',
-        imgStyle: {height: '64px', width: 'auto'},
+        imgStyle: { height: '64px', width: 'auto' },
         label: 'ФГБУ «Объединенная больница с поликлиникой» Управление делами Президента Российской Федерации',
         address: 'г. Москва, Мичуринский пр-т д. 6',
         license: 'Лицензия № ЛО41-00110-77/00574611 от 29.11.2018',
@@ -153,7 +154,7 @@ export const partners = [
     {
         id: 2,
         logo: '/images/partners/ckb.png',
-        imgStyle: {height: '64px', width: 'auto'},
+        imgStyle: { height: '64px', width: 'auto' },
         label: 'ФГБУ «Объединенная больница с поликлиникой» Управление делами Президента Российской Федерации',
         address: 'г. Москва, ул. Маршала Тимошенко, д. 15',
         license: 'Лицензия Л041-00110-77/00573728 от 14.12.2020',
@@ -162,7 +163,7 @@ export const partners = [
     {
         id: 3,
         logo: '/images/partners/3_1_1x.png',
-        imgStyle: {height: '64px', width: 'auto'},
+        imgStyle: { height: '64px', width: 'auto' },
         label: '«Клиническая больница» Управления делами Президента Российской Федерации',
         address: 'г. Москва, вн. тер. г. муниципальный округ Метрогородок, ул. Лосиноостровская, д. 45, корп. 2',
         license: 'Лицензия Л041-00110-77/00360660 от 27.06.2019',
@@ -171,7 +172,7 @@ export const partners = [
     {
         id: 4,
         logo: '/images/partners/4_1_1x.png',
-        imgStyle: {height: '56px', width: 'auto'},
+        imgStyle: { height: '56px', width: 'auto' },
         label: 'Городская клиническая больница имени С.С. Юдина',
         address: 'г. Москва, Коломенский пр-д, д. 4',
         license: 'Лицензия Л041-01137-77/00574302 от 15.10.2020',
@@ -180,7 +181,7 @@ export const partners = [
     {
         id: 5,
         logo: '/images/partners/medsi.png',
-        imgStyle: {height: '56px', width: 'auto'},
+        imgStyle: { height: '56px', width: 'auto' },
         label: 'МЕДСИ',
         address: 'г. Москва, Грузинский переулок, дом 3А',
         license: 'Лицензия Л041-01137-77/00370395 от 11.11.2020',
@@ -189,7 +190,7 @@ export const partners = [
     {
         id: 6,
         logo: '/images/partners/6_1_1x.png',
-        imgStyle: {height: '56px', width: 'auto'},
+        imgStyle: { height: '56px', width: 'auto' },
         label: 'Юсуповская больница',
         address: 'г. Москва, ул. Нагорная, д. 17, корп. 6',
         license: 'Лицензия Л041-01137-77/00347724 от 19.03.2020',
@@ -198,7 +199,7 @@ export const partners = [
     {
         id: 7,
         logo: '/images/partners/volinka.svg',
-        imgStyle: {height: '82px', width: 'auto'},
+        imgStyle: { height: '82px', width: 'auto' },
         label: 'ФГБУ «Клиническая больница № 1» Управления делами Президента Российской Федерации (Волынская больница)',
         address: 'г. Москва, ул. Староволынская, д. 10',
         license: 'Лицензия Л041-00110-77/00553430 от 31.03.2020',
@@ -216,7 +217,7 @@ export const partners = [
     {
         id: 16,
         logo: '/images/partners/logo_eramish.png',
-        imgStyle: {height: '82px', width: 'auto'},
+        imgStyle: { height: '82px', width: 'auto' },
         label: 'ГКБ имени А. К. Ерамишанцева',
         address: 'г. Москва, ул. Ленская, д. 15',
         license: 'Лицензия Л041-01137-77/00574895 от 20.11.2020',
@@ -225,7 +226,7 @@ export const partners = [
     {
         id: 9,
         logo: '/images/partners/9_1_1x.png',
-        imgStyle: {height: '82px', width: 'auto'},
+        imgStyle: { height: '82px', width: 'auto' },
         label: 'Городская клиническая больница № 67 имени Л. А. Ворохобова',
         address: 'г. Москва, ул. Саляма Адиля, д. 2/44',
         license: 'Лицензия Л0-77-01-019806 от 20.03.2020',
@@ -234,7 +235,7 @@ export const partners = [
     {
         id: 10,
         logo: '/images/partners/pirogovka.png',
-        imgStyle: {height: '100px', width: 'auto'},
+        imgStyle: { height: '100px', width: 'auto' },
         label: 'Первая Градская Больница имени Н.И. Пирогова',
         address: 'г. Москва, Ленинский проспект, д. 8',
         license: 'Лицензия Л017-01137-77/00143187 от 01.04.2014',
@@ -243,7 +244,7 @@ export const partners = [
     {
         id: 11,
         logo: '/images/partners/11_1_1x.png',
-        imgStyle: {height: '100px', width: 'auto'},
+        imgStyle: { height: '100px', width: 'auto' },
         label: 'Городская клиническая больница имени В.В. Виноградова',
         address: 'г. Москва, ул. Вавилова, д. 61',
         license: 'Лицензия Л041-01137-77/00574649 от 30.09.2020',
@@ -252,7 +253,7 @@ export const partners = [
     {
         id: 12,
         logo: '/images/partners/52clinic.svg',
-        imgStyle: {height: '100px', width: 'auto'},
+        imgStyle: { height: '100px', width: 'auto' },
         label: 'Городская клиническая больница №52',
         address: 'г. Москва, ул. Пехотная, д.3',
         license: 'Лицензия Л041-00110-50/00574906 от 13.11.2020',
@@ -261,7 +262,7 @@ export const partners = [
     {
         id: 13,
         logo: '/images/partners/mknc.svg',
-        imgStyle: {height: '90px', width: 'auto'},
+        imgStyle: { height: '90px', width: 'auto' },
         label: 'Московский клинический научный центр имени А.С. Логинова',
         address: 'г. Москва, улица Новогиреевская д.1 корпус 1',
         license: 'Лицензия Л041-01137-77/00563190 от 16.12.2020',
@@ -270,7 +271,7 @@ export const partners = [
     {
         id: 14,
         logo: '/images/partners/botkin.svg',
-        imgStyle: {height: '90px', width: 'auto'},
+        imgStyle: { height: '90px', width: 'auto' },
         label: 'Московский многопрофильный научно-клинический центр имени С.П. Боткина',
         address: 'г. Москва 2-ой Боткинский проезд, 5',
         license: 'Лицензия Л041-01137-77/00590128 от 18.12.2020',
@@ -279,10 +280,10 @@ export const partners = [
     {
         id: 15,
         logo: '/images/partners/gemo-centr.png',
-        imgStyle: {height: '90px', width: 'auto'},
+        imgStyle: { height: '90px', width: 'auto' },
         label: 'ФГБУ «НМИЦ ГЕМАТОЛОГИИ» МИНЗДРАВА РОССИИ',
         address: 'г. Москва, Новый Зыковский проезд, д. 4',
         license: 'Лицензия Л041-00110-77/00553287 от 29.01.2018',
         alt: 'ФГБУ «НМИЦ ГЕМАТОЛОГИИ» МИНЗДРАВА РОССИИ'
     },
-]
+];

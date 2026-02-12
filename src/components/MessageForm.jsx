@@ -58,12 +58,10 @@ export const MessageForm = ({onSuccess, onFailed}) => {
             <BaseInput control={control} label="Email" name="email" mask="smirnov@mail.ru" regexp={regExpEmail} errorType={errors?.email?.type}/>
             <BaseInput control={control} label="Доп.информация" name="info" multiline={true} mask="Опишите ситуацию"/>
 
-            <Box sx={{display: 'flex'}}>
+            <Box sx={{display: 'flex', alignItems: 'center'}}>
                 <Checkbox checked={checked} onChange={handleChange} sx={{alignSelf: 'start'}}/>
                 <Typography sx={{fontSize: 11, lineHeight: '11px'}}>
-                    Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в
-                    соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и
-                    для целей, определенных в Согласии на обработку персональных данных
+                    Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных.
                 </Typography>
             </Box>
 
