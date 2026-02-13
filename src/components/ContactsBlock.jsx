@@ -60,11 +60,11 @@ export const ContactsBlock = ({onSuccess, onFailed, router, isMobile, onOpenCall
                     <Typography sx={{color: 'var(--black)', fontSize: 18, textTransform: 'uppercase'}}>ООО
                         "МСК"</Typography>
                     <Typography sx={{color: 'var(--black)', fontSize: 18, textTransform: 'uppercase'}}>ИНН:
-                        9725116009</Typography>
+                        9727115000</Typography>
                     <Typography sx={{color: 'var(--black)', fontSize: 18, textTransform: 'uppercase'}}>КПП:
-                        772501001</Typography>
+                        772701001</Typography>
                     <Typography sx={{color: 'var(--black)', fontSize: 18, textTransform: 'uppercase'}}>ОГРН:
-                        1237700147343</Typography>
+                        1257700446321</Typography>
                 </Box>
                 <Box sx={{marginTop: '20px', display: 'grid', gridTemplateColumns: '1fr 1fr'}}>
 
